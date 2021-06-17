@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>My family</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>
+            THE CUTEST DOG BREED EVER
+        </h1>
+        <h2>
+            Guess what it is (hint: Border Collie)
+        </h2>
+            <p id="hrBetweenfirstPicAndFamilyNames">
+                ____________
+            </p>
+            <button id="viewDogs" type="button" onclick="update()">
+                View the best dog breed ever
+            </button>
+            <img id="dogPictures" src="https://media.istockphoto.com/photos/black-and-white-border-collie-sitting-8-months-old-isolated-on-white-picture-id823781632?k=6&m=823781632&s=612x612&w=0&h=-vq9ts0adUCHalLDeLh3g_n1uoa8XGvmzjgqhZEcBJs=" style="width: 40%;">
+            <h3 id="dogNamesLabel">Chase
+            </h3>
+    </body>
+    <script>
+        var dogPictures = ["https://media.istockphoto.com/photos/black-and-white-border-collie-sitting-8-months-old-isolated-on-white-picture-id823781632?k=6&m=823781632&s=612x612&w=0&h=-vq9ts0adUCHalLDeLh3g_n1uoa8XGvmzjgqhZEcBJs=", 
+        "https://image.freepik.com/free-photo/adult-border-collie_87557-9995.jpg", 
+        "https://th.bing.com/th/id/OIP.c9KVchUMPGUNBIxfsNGLrQHaIM?pid=ImgDet&rs=1", 
+        "https://t4.ftcdn.net/jpg/02/23/97/39/360_F_223973988_vx7SHjJhc4u211MdNLJyxrygoIR1ksHW.jpg"];
+        var dogNames = ["Chase", "Luna", "Buddy", "Jackie"];
+        var i = 0;
+        function update(){
+            i++;
+            var numberOfDogs = 3;
+            if(i > numberOfDogs){
+                i = 0;
+            }
+            var updatedPic = dogPictures[i];
+            var updatedNames = dogNames[i];
+            document.getElementById("dogNamesLabel").innerHTML = updatedNames;
+            document.getElementById("dogPictures").src= updatedPic;
+        }
+    </script>
+</html>
